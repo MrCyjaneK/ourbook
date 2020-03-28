@@ -30,12 +30,12 @@ ourbook is different! All your data is stored on your own device. No central ser
 
 
 
-http://play.google.com/store/apps/details?id=onion.network
+https://github.com/MrCyjaneK/ReDone/releases
 
-http://onionapps.github.io/ourbook/
 
-Author: http://github.com/onionApps - jkrnk73uid7p5thz.onion - bitcoin:1kGXfWx8PHZEVriCNkbP5hzD15HS4AyKf
+Original author: http://github.com/onionApps - jkrnk73uid7p5thz.onion - bitcoin:1kGXfWx8PHZEVriCNkbP5hzD15HS4AyKf
 
+ReDone author: http://github.com/MrCyjaneK - oybf754dmyie72xl.onion
 
 
 
@@ -56,19 +56,17 @@ Author: http://github.com/onionApps - jkrnk73uid7p5thz.onion - bitcoin:1kGXfWx8P
 - Open project
 - Hit the run button
 
-Tor binaries: This repository already contains Tor binaries for a few different platforms and Android versions. If you want to build everything from source, you'd have to replace them. Building Tor for Android can be a bit tricky, but there are a few instructions on the web. If your Network.onion build only needs to work on one platform, you can simply replace all four files with the same binary; overhead will be compressed away. You could probably also extract the Tor binary from some other Android app if you trust it more and drop it in here. 
+
+Tor binaries: This repository already contains Tor binaries for a few different platforms and Android versions. If you want to build everything from source, you'd have to replace them. Building Tor for Android can be a bit tricky, but there are a few instructions on the web. If your ReDone build only needs to work on one platform, you can simply replace all four files with the same binary; overhead will be compressed away. You could probably also extract the Tor binary from some other Android app if you trust it more and drop it in here.
 
 
 
 ## Bots
-Network.onion supports the operation of automated bots. Some can be created by simply installing Network.onion on a device or emulator and enabling the respective bot mode. Others need a bit of programming. For more information, see https://github.com/onionApps/Network.onion/blob/master/bots/README.md.
+ReDone supports the operation of automated bots. Some can be created by simply installing Network.onion on a device or emulator and enabling the respective bot mode. Others need a bit of programming. For more information, see https://github.com/MrCyjaneK/ReDone/blob/master/bots/README.md.
 
 
 
 
 ## Links
 
-http://play.google.com/store/apps/details?id=onion.network
-
-http://onionapps.github.io/ourbook/
-
+https://github.com/MrCyjaneK/ReDone/releases

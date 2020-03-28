@@ -1,21 +1,15 @@
 <resources>
 
-    <string name="app_name">ourbook</string>
+    <string name="app_name">ReDone</string>
 
     <string name="invitation_text">
         %1$s\n
         \n
         Let\'s connect via %4$s, a fully decentralized peer-to-peer social network!\n
         \n
-        contact: network.onion/%2$s/%3$s\n
-        (click after installation to connect)\n
-        \n
-        onion: http://%2$s.onion/network.onion\n
-        \n
-        clearnet: http://%2$s.onion.to/network.onion\n
+        Link: http://%2$s.onion/\n
         \n
         ID: %2$s\n
-        (copy manually if the links are not displayed correctly)\n
     </string>
 
     <string-array name="acceptmessagesvalues">

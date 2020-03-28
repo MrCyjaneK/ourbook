@@ -1,0 +1,7 @@
+#!/bin/bash
+./gradlew build # --dontwarn com.squareup.okhttp.**
+
+echo "EXIT CODE: $?"
+
+adb install app/build/outputs/apk/app-debug.apk
+rm -rf app/build/outputs/apk
