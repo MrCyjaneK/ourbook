@@ -20,22 +20,12 @@ ourbook is different! All your data is stored on your own device. No central ser
 - Private chat
 
 
-![](https://raw.githubusercontent.com/onionApps/Network.onion/master/gfx/s0.png)
-![](https://raw.githubusercontent.com/onionApps/Network.onion/master/gfx/s1.png)
-![](https://raw.githubusercontent.com/onionApps/Network.onion/master/gfx/s2.png)
-![](https://raw.githubusercontent.com/onionApps/Network.onion/master/gfx/s3.png)
-
-
-![](https://raw.githubusercontent.com/onionApps/Network.onion/master/gfx/network01edit.jpg)
-
-
-
 https://github.com/MrCyjaneK/ReDone/releases
 
 
 Original author: http://github.com/onionApps - jkrnk73uid7p5thz.onion - bitcoin:1kGXfWx8PHZEVriCNkbP5hzD15HS4AyKf
 
-ReDone author: http://github.com/MrCyjaneK - oybf754dmyie72xl.onion
+ReDone author: http://github.com/MrCyjaneK - 7wcmd4sgickbvnv7.onion
 
 
 
@@ -52,6 +42,7 @@ ReDone author: http://github.com/MrCyjaneK - oybf754dmyie72xl.onion
 ## Building
 - Clone this repository
 - (Optionally, replace the included Tor binaries at /bin/ with your own and run /bin/pack.sh)
+        (When I've tried to update to tor 0.4.x I've ran over issues that I was unable to fix :( pull request are welcome)
 - (Get Android Studio)
 - Open project
 - Hit the run button
@@ -62,8 +53,7 @@ Tor binaries: This repository already contains Tor binaries for a few different 
 
 
 ## Bots
-ReDone supports the operation of automated bots. Some can be created by simply installing Network.onion on a device or emulator and enabling the respective bot mode. Others need a bit of programming. For more information, see https://github.com/MrCyjaneK/ReDone/blob/master/bots/README.md.
-
+ReDone supports the operation of automated bots. Some can be created by simply installing ReDone on a device or emulator and enabling the respective bot mode. Others need a bit of programming. For more information, see https://github.com/MrCyjaneK/ReDone/blob/master/bots/README.md.
 
 
 

@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
     Timer timer = null;
     private ViewPager viewPager;
     ChatPage chatPage;
+    BoardPage boardPage;
 
     public void blink(final int id) {
         runOnUiThread(new Runnable() {
@@ -246,10 +247,11 @@ public class MainActivity extends AppCompatActivity {
 
         wallPage = new WallPage(this);
         friendPage = new FriendPage(this);
-
+        //boardPage = new BoardPage(this);
         if (address.isEmpty()) {
             requestPage = new RequestPage(this);
             pages = new BasePage[]{
+                    //boardPage,
                     wallPage,
                     friendPage,
                     requestPage,
