@@ -832,10 +832,10 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
 
-        if (id == R.id.action_menu_rate) {
-            rateThisApp();
-            return true;
-        }
+        //if (id == R.id.action_menu_rate) {
+        //    rateThisApp();
+        //    return true;
+        //}
 
         if (id == R.id.action_menu_settings) {
             startActivity(new Intent(this, SettingsActivity.class));
@@ -861,19 +861,19 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    void rateThisApp() {
-        try {
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + getPackageName()));
-            PackageManager pm = getPackageManager();
-            for (ApplicationInfo packageInfo : pm.getInstalledApplications(0)) {
-                if (packageInfo.packageName.equals("com.android.vending"))
-                    intent.setPackage("com.android.vending");
-            }
-            startActivity(intent);
-        } catch (Throwable t) {
-            Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
-        }
-    }
+    //void rateThisApp() {
+    //    try {
+    //        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + getPackageName()));
+    //        PackageManager pm = getPackageManager();
+    //        for (ApplicationInfo packageInfo : pm.getInstalledApplications(0)) {
+    //            if (packageInfo.packageName.equals("com.android.vending"))
+    //                intent.setPackage("com.android.vending");
+    //        }
+    //        startActivity(intent);
+    //    } catch (Throwable t) {
+    //        Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
+    //    }
+    //}
 
     void showId() {
         final String id = getID();
@@ -1150,7 +1150,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_SEND);
 
-        String url = "https://play.google.com/store/apps/details?id=" + getPackageName();
+        String url = "https://github.com/MrCyjaneK/ReDone/releases";
 
         intent.putExtra(Intent.EXTRA_REFERRER, url);
         intent.putExtra("customAppUri", url);

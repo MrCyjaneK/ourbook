@@ -65,12 +65,12 @@
         android:id="@+id/action_menu_invite_friends"
         android:title="Invite friends"
         />
-
+    <!--
     <item
         android:id="@+id/action_menu_rate"
         android:title="Rate this app"
         />
-
+    -->
     <item
         android:id="@+id/action_menu_settings"
         android:title="Settings"
