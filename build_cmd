@@ -1,7 +1,16 @@
 #!/bin/bash
 ./gradlew build # --dontwarn com.squareup.okhttp.**
 
-echo "EXIT CODE: $?"
-
-adb install app/build/outputs/apk/app-debug.apk
-rm -rf app/build/outputs/apk
+if [ "$?" == "0" ];
+then
+    echo "All ok";
+    echo "Stopping app..."
+    #adb shell ps | grep onion.network | awk '{print $2}' | xargs adb shell kill
+    adb shell am force-stop onion.network
+    echo "Installing update..."
+    adb install app/build/outputs/apk/app-debug.apk
+    echo "Starting app..."
+    adb shell am start -n onion.network/onion.network.MainActivity
+else
+    echo "Oups! Something have failed, sorry";
+fi

@@ -61,6 +61,7 @@ import org.json.JSONObject;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.lang.Math;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -801,7 +802,114 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (id == R.id.action_refresh) {
-            load();
+            //     public ItemTask(Context context, String address, String type, String index, int count)
+            {
+
+                final String a = address;
+                ItemResult itemResult = ItemDatabase.getInstance(this).get("friend", "", 12);
+                //for(int i = 0; i < itemResult.size(); i++) {
+                //    //if(requestGeneration > currentRequestGeneration) {
+                //    //    snack("abort");
+                //    //}
+                //    String addr = itemResult.at(0).key();
+                //    //boolean ok = requestUpdate(addr);
+                //    snack("addr=" + addr + ";i=" + 0 + ";size=" + itemResult.size());
+                //}
+                double randomDouble = Math.random();
+	            randomDouble = randomDouble * itemResult.size();
+	            int randomInt = (int) randomDouble;
+                final String randomFriend = itemResult.at(randomInt).key();
+                snack("Loading board of friend: " + randomFriend);
+                this.startActivity(new Intent(this, MainActivity.class).putExtra("address", randomFriend));
+
+
+
+                new ItemTask(this, a, "name", "", 9999999) {
+                    @Override
+                    protected void onProgressUpdate(ItemResult... values) {
+                        Item item = values[0].one();
+                        nameItemResult = values[0];
+                        for (BasePage page : pages) {
+                            page.onNameItem(item);
+                        }
+                        if (!address.isEmpty()) {
+                            if(item.json().has("name")) {
+                                name = item.json().optString("name");
+                            }
+                            if (db.hasKey("friend", a)) {
+                                Item it = db.getByKey("friend", address);
+                                if (it != null) {
+                                    JSONObject o = it.json();
+                                    try {
+                                        o.remove("name");
+                                        if (name != null && !name.isEmpty()) o.put("name", name);
+                                    } catch (JSONException ex) {
+                                        throw new RuntimeException(ex);
+                                    }
+                                    db.put(new Item(it.type(), it.key(), it.index(), o));
+                                }
+                            }
+                        }
+                        updateActionBar();
+                    }
+                }.execute2();
+
+                prefetchExtra(this, a);
+            }
+            /*
+            updateMenu();
+
+            initTabs();
+
+            {
+
+                final String a = address;
+
+                new ItemTask(this, a, "name", "", 1) {
+                    @Override
+                    protected void onProgressUpdate(ItemResult... values) {
+                        Item item = values[0].one();
+                        nameItemResult = values[0];
+                        for (BasePage page : pages) {
+                            page.onNameItem(item);
+                        }
+                        if (!address.isEmpty()) {
+                            if(item.json().has("name")) {
+                                name = item.json().optString("name");
+                            }
+                            if (db.hasKey("friend", a)) {
+                                Item it = db.getByKey("friend", address);
+                                if (it != null) {
+                                    JSONObject o = it.json();
+                                    try {
+                                        o.remove("name");
+                                        if (name != null && !name.isEmpty()) o.put("name", name);
+                                    } catch (JSONException ex) {
+                                        throw new RuntimeException(ex);
+                                    }
+                                    db.put(new Item(it.type(), it.key(), it.index(), o));
+                                }
+                            }
+                        }
+                        updateActionBar();
+                    }
+                }.execute2();
+
+                prefetchExtra(this, a);
+
+            }
+
+            for (BasePage page : pages) {
+                page.load();
+            }
+
+            fabvis();
+
+            updateActionBar();
+            */
+
+
+            //load();
             return true;
         }
 
