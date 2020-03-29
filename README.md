@@ -2,8 +2,6 @@
 
 ## Fully distributed peer-to-peer social network using onion routing
 
-![](https://raw.githubusercontent.com/onionApps/Network.onion/master/gfx/netfungra9.png)
-
 Conventional social networks store all information on central servers, forcing their users to give up control of their own data, compromising their privacy, and exposing them to surveillance and censorship.
 
 ReDone is different! All your data is stored on your own device. No central servers are needed. Devices communicate with each other over a decentralized peer-to-peer network. All communication is anonymized and encrypted via Onion Routing (Tor).
@@ -61,9 +59,10 @@ https://github.com/MrCyjaneK/ReDone/releases
 
 ## Todo
 
-[ ] Support for v3 .onion
-[ ] Allow to send images via chat
-[ ] 'Board' that will contain new posts with infinite scroll option.
-[ ] Group chats
-[ ] Create some cool bots
-[ ] Create friend-bots
+
+ - [ ] Support for v3 .onion
+ - [ ] Allow to send images via chat
+ - [ ] 'Board' that will contain new posts with infinite scroll option.
+ - [ ] Group chats
+ - [ ] Create some cool bots
+ - [ ] Create friend-bots
