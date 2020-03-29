@@ -1043,6 +1043,7 @@ public class MainActivity extends AppCompatActivity {
                 })
                 .show();
                 */
+
         final View v = getLayoutInflater().inflate(R.layout.url_dialog, null);
 
         //((TextView)v.findViewById(R.id.contact_link_text)).setText(String.format("network.onion/%s/%s", getID(), name));
@@ -1074,30 +1075,30 @@ public class MainActivity extends AppCompatActivity {
             });
         }
 
-        {
-            final String clearnetLink = String.format("%s.onion.to/network.onion", getID());
-            ((TextView) v.findViewById(R.id.clearnet_link_text)).setText(clearnetLink);
-            v.findViewById(R.id.clearnet_link_copy).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-                    clipboard.setText(clearnetLink);
-                    toast("Link copied to clipboard.");
-                }
-            });
-            v.findViewById(R.id.clearnet_link_share).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    startActivity(new Intent(Intent.ACTION_SEND).putExtra(Intent.EXTRA_TEXT, "http://" + clearnetLink).setType("text/plain"));
-                }
-            });
-            v.findViewById(R.id.clearnet_link_view).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://" + clearnetLink)));
-                }
-            });
-        }
+        //{
+            //final String clearnetLink = String.format("%s.onion.to/network.onion", getID());
+            //((TextView) v.findViewById(R.id.clearnet_link_text)).setText(clearnetLink);
+            //v.findViewById(R.id.clearnet_link_copy).setOnClickListener(new View.OnClickListener() {
+            //    @Override
+            //    public void onClick(View v) {
+            //        ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+            //        clipboard.setText(clearnetLink);
+            //        toast("Link copied to clipboard.");
+            //    }
+            //});
+            //v.findViewById(R.id.clearnet_link_share).setOnClickListener(new View.OnClickListener() {
+            //    @Override
+            //    public void onClick(View v) {
+            //        startActivity(new Intent(Intent.ACTION_SEND).putExtra(Intent.EXTRA_TEXT, "http://" + clearnetLink).setType("text/plain"));
+            //    }
+            //});
+            //v.findViewById(R.id.clearnet_link_view).setOnClickListener(new View.OnClickListener() {
+            //    @Override
+            //    public void onClick(View v) {
+            //        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://" + clearnetLink)));
+            //    }
+            //});
+        //}
 
 
 
