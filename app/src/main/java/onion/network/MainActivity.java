@@ -72,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
     WallPage wallPage;
     FriendPage friendPage;
+    UsersPage usersPage;
     RequestPage requestPage;
     BasePage[] pages;
     int REQUEST_QR = 12;
@@ -801,7 +802,7 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
 
-        if (id == R.id.action_refresh) {
+        if (id == R.id.action_show_top) {
             //     public ItemTask(Context context, String address, String type, String index, int count)
             {
 
@@ -910,6 +911,11 @@ public class MainActivity extends AppCompatActivity {
 
 
             //load();
+            return true;
+        }
+
+        if (id == R.id.action_refresh) {
+            load();
             return true;
         }
 

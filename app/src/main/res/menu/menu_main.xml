@@ -19,12 +19,17 @@
         android:title="Friend"
         app:showAsAction="always|withText" />
 
+    <item
+            android:icon="@drawable/ic_folder_open_white_36dp"
+            android:id="@+id/action_show_top"
+            android:title="Show top profiles"
+            app:showAsAction="always" />
 
 
     <item
         android:icon="@drawable/ic_sync_white_36dp"
         android:id="@+id/action_refresh"
-        android:title="Refresh"
+        android:title="Random"
         app:showAsAction="always" />
 
 

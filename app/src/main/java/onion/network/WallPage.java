@@ -364,8 +364,8 @@ public class WallPage extends BasePage {
 
                     String datestr = Utils.date(o.optString("date"));
                     date.setText(datestr);
-
-                    if (!postAddress.equals(wallAddress)) {
+                    // Click click
+                    if (!postAddress.equals(myAddress) /*!postAddress.equals(wallAddress)*/) {
                         address.setPaintFlags(address.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
                         name.setPaintFlags(address.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
                         link.setClickable(true);
